@@ -3443,7 +3443,6 @@
             ]
           },
           {
-            "description": "option + t to open iTerm.app",
             "manipulators": [
               {
                 "conditions": [
