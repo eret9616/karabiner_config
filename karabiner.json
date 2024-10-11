@@ -45,53 +45,6 @@
             ]
           },
           {
-            "description": "Remap command+q/w to command+h in iTerm2",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": ["^com.googlecode.iterm2$"],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "q",
-                  "modifiers": {
-                    "mandatory": ["command"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "h",
-                    "modifiers": ["command"]
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": ["^com.googlecode.iterm2$"],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "w",
-                  "modifiers": {
-                    "mandatory": ["command"]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "h",
-                    "modifiers": ["command"]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
             "description": "Remap Command+I to Option+Command+I in Google Chrome and Chromium",
             "manipulators": [
               {
@@ -943,7 +896,7 @@
             ]
           },
           {
-            "description": "这个设置把右边键盘控制的破坏了] map keypad_4(Home in niz micro 84 keyboard)  cmd+1 cmd+2 cmd+3 cmd+4  to    if not Chrome open chrome, else openVscode,     Chrome , Vscode ,iTerm ",
+            "description": "这个设置把右边键盘控制的破坏了] map keypad_4(Home in niz micro 84 keyboard)  cmd+1 cmd+2 cmd+3 cmd+4  to    if not Chrome open chrome, else openVscode,     Chrome , Vscode ,alacritty ",
             "manipulators": [
               {
                 "conditions": [
@@ -1186,7 +1139,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.googlecode.iterm2$"],
+                    "bundle_identifiers": ["^org.alacritty$"],
                     "type": "frontmost_application_unless"
                   }
                 ],
@@ -1198,7 +1151,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open -a 'iTerm.app'"
+                    "shell_command": "open -a 'alacritty.app'"
                   }
                 ],
                 "type": "basic"
@@ -1206,7 +1159,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.googlecode.iterm2$"],
+                    "bundle_identifiers": ["^org.alacritty$"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -1599,7 +1552,7 @@
                     "type": "frontmost_application_unless"
                   },
                   {
-                    "bundle_identifiers": ["^com.googlecode.iterm2$"],
+                    "bundle_identifiers": ["^org.alacritty$"],
                     "type": "frontmost_application_unless"
                   }
                 ],
@@ -3418,12 +3371,12 @@
             ]
           },
           {
-            "description": "option + t to open iTerm.app",
+            "description": "option + t to open alacritty.app",
             "manipulators": [
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.googlecode.iterm2$"],
+                    "bundle_identifiers": ["^org.alacritty$"],
                     "type": "frontmost_application_unless"
                   }
                 ],
@@ -3435,7 +3388,7 @@
                 },
                 "to": [
                   {
-                    "shell_command": "open -a 'iTerm.app'"
+                    "shell_command": "open -a 'alacritty.app'"
                   }
                 ],
                 "type": "basic"
@@ -3443,11 +3396,12 @@
             ]
           },
           {
+            "description": "option + t to open alacritty.app",
             "manipulators": [
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.googlecode.iterm2$"],
+                    "bundle_identifiers": ["^org.alacritty$"],
                     "type": "frontmost_application_if"
                   }
                 ],
