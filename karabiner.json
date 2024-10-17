@@ -3284,6 +3284,19 @@
                         ]
                     },
                     {
+                        "description": "map option+cmd+f5 to scroll right faster",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "f5",
+                                      "modifiers": { "mandatory": ["command", "option"], "optional": ["any"] }
+                                },
+                                "to": [{ "mouse_key": { "horizontal_wheel": -64 } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "map cmd+f6 to scroll left",
                         "manipulators": [
                             {
@@ -3292,6 +3305,19 @@
                                     "modifiers": { "mandatory": ["command"] }
                                 },
                                 "to": [{ "mouse_key": { "horizontal_wheel": 32 } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "map option+cmd+f6 to scroll left faster",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "f6",
+                                    "modifiers": { "mandatory": ["command", "option"], "optional": ["any"] }
+                                },
+                                "to": [{ "mouse_key": { "horizontal_wheel": 64 } }],
                                 "type": "basic"
                             }
                         ]
@@ -3307,11 +3333,37 @@
                         ]
                     },
                     {
+                        "description": "map option+f5 to scroll down faster",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "f5",
+                                    "modifiers": { "mandatory": ["option"] }
+                                },
+                                "to": [{ "mouse_key": { "vertical_wheel": 64 } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "map f6 to scroll up",
                         "manipulators": [
                             {
                                 "from": { "key_code": "f6" },
                                 "to": [{ "mouse_key": { "vertical_wheel": -32 } }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "map option+f6 to scroll up faster",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "f6",
+                                    "modifiers": { "mandatory": ["option"] }
+                                },
+                                "to": [{ "mouse_key": { "vertical_wheel": -64 } }],
                                 "type": "basic"
                             }
                         ]
