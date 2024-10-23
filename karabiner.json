@@ -989,6 +989,22 @@
                                     }
                                 ],
                                 "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "^com.parallels.desktop$"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "7",
+                                    "modifiers": { "mandatory": ["left_command"] }
+                                },
+                                "to": [{ "shell_command": "open -a 'Parallels Desktop'" }],
+                                "type": "basic"
                             }
                         ]
                     },
