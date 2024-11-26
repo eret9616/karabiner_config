@@ -303,7 +303,7 @@
               {
                 "from": {
                   "key_code": "m",
-                  "modifiers": { "mandatory": ["control", "command"] }
+                  "modifiers": { "mandatory": ["control"] }
                 },
                 "to": [{ "key_code": "play_or_pause" }],
                 "type": "basic"
