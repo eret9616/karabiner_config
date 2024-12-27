@@ -2192,7 +2192,9 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.microsoft.VSCode$"],
+                    "bundle_identifiers": [
+                      "^com.microsoft.VSCode$|com.todesktop.230313mzl4w4u92$"
+                    ],
                     "type": "frontmost_application_if"
                   },
                   {
@@ -2219,7 +2221,9 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.microsoft.VSCode$"],
+                    "bundle_identifiers": [
+                      "^com.microsoft.VSCode$|com.todesktop.230313mzl4w4u92$"
+                    ],
                     "type": "frontmost_application_if"
                   },
                   {
@@ -2482,7 +2486,9 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.microsoft.VSCode$"],
+                    "bundle_identifiers": [
+                      "^com.microsoft.VSCode$|com.todesktop.230313mzl4w4u92$"
+                    ],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -2506,7 +2512,9 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.microsoft.VSCode$"],
+                    "bundle_identifiers": [
+                      "^com.microsoft.VSCode$|com.todesktop.230313mzl4w4u92$"
+                    ],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -2854,67 +2862,6 @@
                   "modifiers": { "mandatory": ["right_shift"] }
                 },
                 "to": [{ "key_code": "home" }],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Remap option+h/j/k/l to arrow keys in VSCode",
-            "manipulators": [
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": ["^com.microsoft.VSCode$"],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "h",
-                  "modifiers": { "mandatory": ["option"] }
-                },
-                "to": [{ "key_code": "left_arrow" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": ["^com.microsoft.VSCode$"],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "j",
-                  "modifiers": { "mandatory": ["option"] }
-                },
-                "to": [{ "key_code": "down_arrow" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": ["^com.microsoft.VSCode$"],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "k",
-                  "modifiers": { "mandatory": ["option"] }
-                },
-                "to": [{ "key_code": "up_arrow" }],
-                "type": "basic"
-              },
-              {
-                "conditions": [
-                  {
-                    "bundle_identifiers": ["^com.microsoft.VSCode$"],
-                    "type": "frontmost_application_if"
-                  }
-                ],
-                "from": {
-                  "key_code": "l",
-                  "modifiers": { "mandatory": ["option"] }
-                },
-                "to": [{ "key_code": "right_arrow" }],
                 "type": "basic"
               }
             ]
