@@ -3110,38 +3110,12 @@
             ]
           },
           {
-            "description": "map cmd command+f11 to brightnesss down",
+            "description": "map cmd command+f11 to brightnesss down small",
             "manipulators": [
               {
                 "from": {
                   "key_code": "f11",
                   "modifiers": { "mandatory": ["command"] }
-                },
-                "to": [{ "key_code": "display_brightness_decrement" }],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "map cmd command+f12 to brightnesss up",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "f12",
-                  "modifiers": { "mandatory": ["command"] }
-                },
-                "to": [{ "key_code": "display_brightness_increment" }],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "map shift+option+cmd+f11 to shift+option+brightness_decrement",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "f11",
-                  "modifiers": { "mandatory": ["command", "shift", "option"] }
                 },
                 "to": [
                   {
@@ -3154,7 +3128,42 @@
             ]
           },
           {
-            "description": "map shift+option+cmd+f12 to shift+option+brightness_increment",
+            "description": "map cmd command+f12 to brightnesss up small",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "f12",
+                  "modifiers": { "mandatory": ["command"] }
+                },
+                "to": [
+                  {
+                    "key_code": "display_brightness_increment",
+                    "modifiers": ["shift", "option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "map shift+option+cmd+f11 to  brightness_decrement",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "f11",
+                  "modifiers": { "mandatory": ["command", "shift", "option"] }
+                },
+                "to": [
+                  {
+                    "key_code": "display_brightness_decrement"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "map shift+option+cmd+f12 to brightness_increment",
             "manipulators": [
               {
                 "from": {
@@ -3163,8 +3172,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "display_brightness_increment",
-                    "modifiers": ["shift", "option"]
+                    "key_code": "display_brightness_increment"
                   }
                 ],
                 "type": "basic"
