@@ -689,11 +689,7 @@
                   "key_code": "6",
                   "modifiers": { "mandatory": ["left_command"] }
                 },
-                "to": [
-                  {
-                    "shell_command": "open -a 'Shadowrocket.app'"
-                  }
-                ],
+                "to": [{ "shell_command": "open -a 'Shadowrocket.app'" }],
                 "type": "basic"
               },
               {
@@ -977,11 +973,7 @@
                   "key_code": "1",
                   "modifiers": { "mandatory": ["left_command"] }
                 },
-                "to": [
-                  {
-                    "shell_command": "open -a 'Visual Studio Code.app'"
-                  }
-                ],
+                "to": [{ "shell_command": "open -a 'Visual Studio Code.app'" }],
                 "type": "basic"
               },
               {
@@ -995,11 +987,7 @@
                   "key_code": "1",
                   "modifiers": { "mandatory": ["left_command"] }
                 },
-                "to": [
-                  {
-                    "shell_command": "open -a 'Google Chrome Beta.app'"
-                  }
-                ],
+                "to": [{ "shell_command": "open -a 'Google Chrome Beta.app'" }],
                 "type": "basic"
               }
             ]
@@ -1265,14 +1253,8 @@
                     "value": 1
                   }
                 ],
-                "from": {
-                  "key_code": "left_shift"
-                },
-                "to": [
-                  {
-                    "key_code": "escape"
-                  }
-                ],
+                "from": { "key_code": "left_shift" },
+                "to": [{ "key_code": "escape" }],
                 "type": "basic"
               },
               {
@@ -3153,11 +3135,7 @@
                   "key_code": "f11",
                   "modifiers": { "mandatory": ["command", "shift", "option"] }
                 },
-                "to": [
-                  {
-                    "key_code": "display_brightness_decrement"
-                  }
-                ],
+                "to": [{ "key_code": "display_brightness_decrement" }],
                 "type": "basic"
               }
             ]
@@ -3170,11 +3148,7 @@
                   "key_code": "f12",
                   "modifiers": { "mandatory": ["command", "shift", "option"] }
                 },
-                "to": [
-                  {
-                    "key_code": "display_brightness_increment"
-                  }
-                ],
+                "to": [{ "key_code": "display_brightness_increment" }],
                 "type": "basic"
               }
             ]
@@ -3218,17 +3192,16 @@
             ]
           },
           {
-            "description": "map control+f11 to (cmd)command+volume_decrement for 'volume control'",
+            "description": "map f11 to (cmd)command+volume_decrement for 'volume control' small step",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "f11",
-                  "modifiers": { "mandatory": ["left_control"] }
+                  "key_code": "f11"
                 },
                 "to": [
                   {
                     "consumer_key_code": "volume_decrement",
-                    "modifiers": ["command"]
+                    "modifiers": ["shift", "option"]
                   }
                 ],
                 "type": "basic"
@@ -3236,17 +3209,16 @@
             ]
           },
           {
-            "description": "map control+f12 to (cmd)command+volume_increment for 'volume control'",
+            "description": "map f12 to (cmd)command+volume_increment for 'volume control' small step",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "f12",
-                  "modifiers": { "mandatory": ["left_control"] }
+                  "key_code": "f12"
                 },
                 "to": [
                   {
                     "consumer_key_code": "volume_increment",
-                    "modifiers": ["command"]
+                    "modifiers": ["shift", "option"]
                   }
                 ],
                 "type": "basic"
