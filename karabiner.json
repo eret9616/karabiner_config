@@ -845,7 +845,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.microsoft.VSCode$"],
+                    "bundle_identifiers": ["^com.todesktop.230313mzl4w4u92$"],
                     "type": "frontmost_application_unless"
                   }
                 ],
@@ -853,13 +853,13 @@
                   "key_code": "2",
                   "modifiers": { "mandatory": ["left_command"] }
                 },
-                "to": [{ "shell_command": "open -a 'Visual Studio Code.app'" }],
+                "to": [{ "shell_command": "open -a 'Cursor.app'" }],
                 "type": "basic"
               },
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.microsoft.VSCode$"],
+                    "bundle_identifiers": ["^com.todesktop.230313mzl4w4u92$"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -973,13 +973,13 @@
                   "key_code": "1",
                   "modifiers": { "mandatory": ["left_command"] }
                 },
-                "to": [{ "shell_command": "open -a 'Visual Studio Code.app'" }],
+                "to": [{ "shell_command": "open -a 'Cursor.app'" }],
                 "type": "basic"
               },
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.microsoft.VSCode$"],
+                    "bundle_identifiers": ["^com.todesktop.230313mzl4w4u92$"],
                     "type": "frontmost_application_if"
                   }
                 ],
