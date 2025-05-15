@@ -375,6 +375,31 @@
             ]
           },
           {
+            "description": "mouse button4 to open Lark.app.",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["^com.electron.lark$"],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": { "pointing_button": "button4" },
+                "parameters": {
+                  "basic.to_if_held_down_threshold_milliseconds": 2500
+                },
+                "to": [{ "shell_command": "open -a 'Lark.app'" }],
+                "to_if_held_down": [
+                  {
+                    "key_code": "h",
+                    "modifiers": ["command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "in Lark,backslashx2 to press escape ,then hide Lark.app, ] to open next unread message,[ to open previous unread message",
             "manipulators": [
               {
