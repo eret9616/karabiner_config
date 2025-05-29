@@ -3411,6 +3411,49 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "left_option + left_shift to open Gemini.app",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.google.Chrome.app.gdfaincndogidkdcdkhapmbffkckdkhn"
+                    ],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "left_shift",
+                  "modifiers": { "mandatory": ["left_option"] }
+                },
+                "to": [{ "shell_command": "open -a 'Gemini.app'" }],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.google.Chrome.app.gdfaincndogidkdcdkhapmbffkckdkhn"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "left_shift",
+                  "modifiers": { "mandatory": ["left_option"] }
+                },
+
+                "to": [
+                  {
+                    "key_code": "h",
+                    "modifiers": ["left_command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       },
