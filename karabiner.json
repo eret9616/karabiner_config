@@ -2147,6 +2147,14 @@
             "description": "Change left_control + x to command + w when used in Chrome",
             "manipulators": [
               {
+                "conditions": [
+                    {
+                        "bundle_identifiers": [
+                            "^com.google.Chrome|org.chromium.Chromium|com.google.Chrome$$"
+                        ],
+                        "type": "frontmost_application_if"
+                    }
+                ],
                 "from": {
                   "key_code": "x",
                   "modifiers": { "mandatory": ["left_control"] }
