@@ -2148,12 +2148,12 @@
             "manipulators": [
               {
                 "conditions": [
-                    {
-                        "bundle_identifiers": [
-                            "^com.google.Chrome|org.chromium.Chromium|com.google.Chrome$$"
-                        ],
-                        "type": "frontmost_application_if"
-                    }
+                  {
+                    "bundle_identifiers": [
+                      "^com.google.Chrome|org.chromium.Chromium|com.google.Chrome$$"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
                 ],
                 "from": {
                   "key_code": "x",
@@ -3414,6 +3414,45 @@
                       "left_option",
                       "left_control"
                     ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "left_option + capslock to open Claude.app",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["^com.anthropic.claudefordesktop$"],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": { "mandatory": ["left_option"] }
+                },
+                "to": [{ "shell_command": "open -a 'Claude.app'" }],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["^com.anthropic.claudefordesktop$"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": { "mandatory": ["left_option"] }
+                },
+
+                "to": [
+                  {
+                    "key_code": "h",
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
