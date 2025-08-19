@@ -10,24 +10,38 @@
           "basic.to_if_held_down_threshold_milliseconds": 5
         },
         "rules": [
-            {
-              "description": "Command+Control+Tab -> Right Arrow",
-              "manipulators": [
-                {
-                  "type": "basic",
-                  "from": {
-                    "key_code": "tab",
-                    "modifiers": {
-                      "mandatory": ["command", "control"],
-                      "optional": ["any"]
-                    }
-                  },
-                  "to": [
-                    { "key_code": "right_arrow" }
-                  ]
-                }
-              ]
-            },
+          {
+            "description": "Command+Control+Tab -> Right Arrow",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": ["command", "control"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [{ "key_code": "right_arrow" }]
+              }
+            ]
+          },
+          {
+            "description": "Shift+Command+Control+Tab -> Left Arrow",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "tab",
+                  "modifiers": {
+                    "mandatory": ["command", "control", "shift"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [{ "key_code": "left_arrow" }]
+              }
+            ]
+          },
           {
             "description": "Remap Command+I to Option+Command+I in Google Chrome and Chromium",
             "manipulators": [
