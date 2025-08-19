@@ -19,7 +19,7 @@
                   "key_code": "tab",
                   "modifiers": {
                     "mandatory": ["command", "control"],
-                    "optional": ["any"]
+                    "optional": []
                   }
                 },
                 "to": [{ "key_code": "right_arrow" }]
@@ -35,7 +35,7 @@
                   "key_code": "tab",
                   "modifiers": {
                     "mandatory": ["command", "control", "shift"],
-                    "optional": ["any"]
+                    "optional": []
                   }
                 },
                 "to": [{ "key_code": "left_arrow" }]
