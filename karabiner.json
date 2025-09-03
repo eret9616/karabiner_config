@@ -387,7 +387,9 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.electron.lark$"],
+                    "bundle_identifiers": [
+                      "^com.larksuite.feishu.ka.saxmsa667.mac$"
+                    ],
                     "type": "frontmost_application_unless"
                   }
                 ],
@@ -395,7 +397,7 @@
                 "parameters": {
                   "basic.to_if_held_down_threshold_milliseconds": 2500
                 },
-                "to": [{ "shell_command": "open -a 'Lark.app'" }],
+                "to": [{ "shell_command": "open -a 'saxmsa667.app'" }],
                 "to_if_held_down": [
                   {
                     "key_code": "h",
@@ -412,7 +414,9 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.electron.lark$"],
+                    "bundle_identifiers": [
+                      "^com.larksuite.feishu.ka.saxmsa667.mac$"
+                    ],
                     "type": "frontmost_application_unless"
                   }
                 ],
@@ -420,7 +424,7 @@
                 "parameters": {
                   "basic.to_if_held_down_threshold_milliseconds": 2500
                 },
-                "to": [{ "shell_command": "open -a 'Lark.app'" }],
+                "to": [{ "shell_command": "open -a 'saxmsa667.app'" }],
                 "to_if_held_down": [
                   {
                     "key_code": "h",
@@ -437,7 +441,9 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.electron.lark$"],
+                    "bundle_identifiers": [
+                      "^com.larksuite.feishu.ka.saxmsa667.mac$"
+                    ],
                     "type": "frontmost_application_if"
                   },
                   {
@@ -459,7 +465,9 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.electron.lark$"],
+                    "bundle_identifiers": [
+                      "^com.larksuite.feishu.ka.saxmsa667.mac$"
+                    ],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -513,7 +521,9 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.electron.larkUNKNOWN$"],
+                    "bundle_identifiers": [
+                      "^com.larksuite.feishu.ka.saxmsa667.macUNKNOWN$"
+                    ],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -529,7 +539,9 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.electron.lark$"],
+                    "bundle_identifiers": [
+                      "^com.larksuite.feishu.ka.saxmsa667.mac$"
+                    ],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -543,6 +555,36 @@
                   {
                     "key_code": "tab",
                     "modifiers": ["left_shift"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "leftShift to Command+K in Lark",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com.larksuite.feishu.ka.saxmsa667.mac$"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "left_shift"
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift"
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "k",
+                    "modifiers": ["command"]
                   }
                 ],
                 "type": "basic"
