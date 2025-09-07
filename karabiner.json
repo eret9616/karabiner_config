@@ -1057,7 +1057,7 @@
             ]
           },
           {
-            "description": "Command + 1 在 Chrome 和 VSCode 之间切换",
+            "description": "Command + 1 在 Chrome 和 Cursor 之间切换",
             "manipulators": [
               {
                 "conditions": [
@@ -1101,6 +1101,57 @@
                 "from": {
                   "key_code": "1",
                   "modifiers": { "mandatory": ["left_command"] }
+                },
+                "to": [{ "shell_command": "open -a 'Google Chrome.app'" }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Shift + Command + 1 在 Chrome 和 VSCode 之间切换",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com.google.Chrome|org.chromium.Chromium|com.google.Chrome$$"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "1",
+                  "modifiers": { "mandatory": ["left_shift", "left_command"] }
+                },
+                "to": [{ "shell_command": "open -a 'Visual Studio Code.app'" }],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["^com.microsoft.VSCode$"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "1",
+                  "modifiers": { "mandatory": ["left_shift", "left_command"] }
+                },
+                "to": [{ "shell_command": "open -a 'Google Chrome.app'" }],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com.google.Chrome|org.chromium.Chromium|com.google.Chrome$$|^com.microsoft.VSCode$"
+                    ],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "1",
+                  "modifiers": { "mandatory": ["left_shift", "left_command"] }
                 },
                 "to": [{ "shell_command": "open -a 'Google Chrome.app'" }],
                 "type": "basic"
