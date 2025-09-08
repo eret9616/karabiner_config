@@ -562,8 +562,38 @@
             ]
           },
           {
-            "description": "leftShift to Command+K in Lark",
+            "description": "leftShift to Command+K in Lark, double leftShift to Esc",
             "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com.larksuite.feishu.ka.saxmsa667.mac$"
+                    ],
+                    "type": "frontmost_application_if"
+                  },
+                  {
+                    "name": "left_shift_pressed",
+                    "type": "variable_if",
+                    "value": 1
+                  }
+                ],
+                "from": {
+                  "key_code": "left_shift"
+                },
+                "to": [
+                  {
+                    "key_code": "escape"
+                  },
+                  {
+                    "set_variable": {
+                      "name": "left_shift_pressed",
+                      "value": 0
+                    }
+                  }
+                ],
+                "type": "basic"
+              },
               {
                 "conditions": [
                   {
@@ -576,15 +606,42 @@
                 "from": {
                   "key_code": "left_shift"
                 },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 400
+                },
                 "to": [
                   {
                     "key_code": "left_shift"
                   }
                 ],
+                "to_delayed_action": {
+                  "to_if_canceled": [
+                    {
+                      "set_variable": {
+                        "name": "left_shift_pressed",
+                        "value": 0
+                      }
+                    }
+                  ],
+                  "to_if_invoked": [
+                    {
+                      "set_variable": {
+                        "name": "left_shift_pressed",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
                 "to_if_alone": [
                   {
                     "key_code": "k",
                     "modifiers": ["command"]
+                  },
+                  {
+                    "set_variable": {
+                      "name": "left_shift_pressed",
+                      "value": 1
+                    }
                   }
                 ],
                 "type": "basic"
