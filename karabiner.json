@@ -3602,9 +3602,7 @@
               {
                 "conditions": [
                   {
-                    "file_paths": [
-                      "/Applications/Gemini.app/Contents/MacOS/app_mode_loader"
-                    ],
+                    "file_paths": [".Gemini.app."],
                     "type": "frontmost_application_unless"
                   }
                 ],
@@ -3618,15 +3616,33 @@
               {
                 "conditions": [
                   {
-                    "file_paths": [
-                      "/Applications/Gemini.app/Contents/MacOS/app_mode_loader"
-                    ],
+                    "file_paths": [".Gemini.app."],
                     "type": "frontmost_application_if"
                   }
                 ],
                 "from": {
                   "key_code": "left_shift",
                   "modifiers": { "mandatory": ["left_option"] }
+                },
+
+                "to": [
+                  {
+                    "key_code": "h",
+                    "modifiers": ["left_command"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "file_paths": [".Gemini.app."],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "w",
+                  "modifiers": { "mandatory": ["left_command"] }
                 },
 
                 "to": [
