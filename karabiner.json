@@ -2311,7 +2311,7 @@
             ]
           },
           {
-            "description": "Change left_control + space to command + l when used in Chrome",
+            "description": "Change left_control + l to command + l when used in Chrome",
             "manipulators": [
               {
                 "conditions": [
@@ -2427,7 +2427,7 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com.google.Chrome|org.chromium.Chromium|com.google.Chrome$$"
+                      "^com.openai.atlas|com.google.Chrome|org.chromium.Chromium|com.google.Chrome$$"
                     ],
                     "type": "frontmost_application_if"
                   },
@@ -2456,7 +2456,7 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com.google.Chrome|org.chromium.Chromium|com.google.Chrome$$"
+                      "^com.openai.atlas|com.google.Chrome|org.chromium.Chromium|com.google.Chrome$$"
                     ],
                     "type": "frontmost_application_if"
                   },
