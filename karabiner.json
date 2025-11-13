@@ -2823,7 +2823,7 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com.google.Chrome|org.chromium.Chromium|com.google.Chrome$$"
+                      "^com.google.Chrome|org.chromium.Chromium|com.google.Chrome|com.openai.atlas$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -2877,6 +2877,29 @@
                   {
                     "input_sources": [{ "language": "zh-Hans" }],
                     "type": "input_source_unless"
+                  }
+                ],
+                "from": { "key_code": "caps_lock" },
+                "parameters": { "basic.to_if_alone_timeout_milliseconds": 200 },
+                "to": [{ "key_code": "right_shift" }],
+                "to_if_alone": [
+                  {
+                    "key_code": "t",
+                    "modifiers": ["command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "在 ChatGPT Atlas，capslock映射到cmd+t",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["^com.openai.atlas"],
+                    "type": "frontmost_application_if"
                   }
                 ],
                 "from": { "key_code": "caps_lock" },
