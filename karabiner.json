@@ -2823,7 +2823,7 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com.google.Chrome|org.chromium.Chromium|com.google.Chrome|com.openai.atlas$"
+                      "^com.google.Chrome|org.chromium.Chromium|com.google.Chrome|com.openai.atlas|com.anthropic.claudefordesktop$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -3602,6 +3602,29 @@
                       "left_option",
                       "left_control"
                     ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "在 Claude.app 中，capslock 映射到 Command+N",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": ["^com.anthropic.claudefordesktop$"],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": { "key_code": "caps_lock" },
+                "parameters": { "basic.to_if_alone_timeout_milliseconds": 200 },
+                "to": [{ "key_code": "right_shift" }],
+                "to_if_alone": [
+                  {
+                    "key_code": "n",
+                    "modifiers": ["command"]
                   }
                 ],
                 "type": "basic"
