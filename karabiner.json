@@ -3671,8 +3671,40 @@
             ]
           },
           {
-            "description": "在 Chrome/ChatGPT 中，[ 键滚动向下，] 键滚动向上",
+            "description": "在 Chrome/ChatGPT 中，[ 键滚动向下，] 键滚动向上，option+[ 和 option+] 输出原字符",
             "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com.openai.atlas|com.google.Chrome|org.chromium.Chromium$"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "open_bracket",
+                  "modifiers": { "mandatory": ["left_option"] }
+                },
+                "to": [{ "key_code": "open_bracket" }],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com.openai.atlas|com.google.Chrome|org.chromium.Chromium$"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "close_bracket",
+                  "modifiers": { "mandatory": ["left_option"] }
+                },
+                "to": [{ "key_code": "close_bracket" }],
+                "type": "basic"
+              },
               {
                 "conditions": [
                   {
