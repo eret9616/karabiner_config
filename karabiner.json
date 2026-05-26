@@ -3705,28 +3705,6 @@
             ]
           },
           {
-            "description": "option + c to command+d then command+c",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "c",
-                  "modifiers": { "mandatory": ["left_option"] }
-                },
-                "to": [
-                  {
-                    "key_code": "d",
-                    "modifiers": ["left_command"]
-                  },
-                  {
-                    "key_code": "c",
-                    "modifiers": ["left_command"]
-                  }
-                ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
             "description": "map eject to shift command option control p(in BTT to open finder)",
             "manipulators": [
               {
